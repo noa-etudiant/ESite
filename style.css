@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,800;1,800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    transition: 0.3s ease-in-out;
+}
+
+body {
+    background: url('https://www.transparenttextures.com/patterns/cartographer.png');
+    background-color: #ffffff;
+}
+
+nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    padding: 20px 50px;
+
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.hero {
+    position: relative;
+    height: 40vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 60%;
+    z-index: 0;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-subtitle {
+    font-size: 24px;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.hero-title {
+    font-size: 80px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.card {
+    width: 300px;
+    height: 380px;
+    border-radius: 12px;
+    transform-style: preserve-3d;
+}
+
+.cards-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 50px 20px;
+}
+
+.card.blue {
+    background: linear-gradient(135deg, #09AFFF, #125575);
+}
+
+.card.pink {
+    background: linear-gradient(135deg, #f7afc8, #d73bc7);
+}
+
+.card.purple {
+    background: linear-gradient(135deg, #976eef, #290987);  
+}
+
+.card.red {
+    background: linear-gradient(135deg, #e48d8d, #cb0606);  
+}
+
+.card.gray {
+    background: linear-gradient(135deg, #bbbbbb, #727272);  
+}
+
+.card .product {
+    height: 85%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    position: relative;
+    transform-style: preserve-3d;
+}
+
+.product .number {
+    font-size: 80px;
+    line-height: 80px;
+    font-style: italic;
+    opacity: 0.25;
+}
+
+.product .sneakers {
+    font-size: 35px;
+    line-height: 35px;
+    font-style: italic;
+    opacity: 0.7;
+}
+
+.product img {
+    height: 180px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-35%, -45%, 0);
+    pointer-events: none;
+}
+
+.card.red .product img {
+    height: 220px;
+}
+
+.product .price {
+    background: rgba(255, 255, 255, 0.15);
+    margin-top: auto;
+    margin-left: auto;
+    margin-right: -20px;
+    padding: 5px 20px;
+    border-radius: 99px 0 0 99px;
+}
+
+.card .title {
+    height: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 0 12px 12px;
+    transform-style: preserve-3d;
+}
+
+.card.blue .title {
+    background: #039BE5;
+}
+
+.card.pink .title {
+    background: #f037bc;
+}
+
+.card.purple .title {
+    background: #5B1AE3;
+}
+
+.card.red .title {
+    background: #e31a1a;
+}
+
+.card.gray .title {
+    background: #878787;
+}
+
+.card:hover .product img {
+    transform: translate3d(-50%, -40%, 80px);
+}
+
+.card:hover .product .number {
+    transform: translateZ(40px);
+    opacity: 1;
+}
+
+.card:hover .product .sneakers {
+    transform: translateZ(40px);
+    opacity: 0.85;
+}
+
+.card:hover .product .price {
+    transform: translateZ(20px);
+}
+
+.card:hover .title h2{
+    transform: translateZ(20px);
+}
+
+@keyframes torn-paper-float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+@media (max-width: 768px) {
+    .about {
+        flex-direction: column;
+    }
+    
+    .about-text {
+        padding-right: 0;
+        margin-bottom: 40px;
+    }
+    
+    .hero-title {
+        font-size: 50px;
+    }
+}

@@ -6,6 +6,94 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<section class="hero">
+  <nav>
+    <div class="logo">LOGO</div>
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#">Cart</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
 
+  <video autoplay muted loop playsinline class="bg-video">
+    <source src="videos/fond.mp4" type="video/mp4">
+  </video>
+
+  <div class="hero-content">
+    <h3 class="hero-subtitle">The</h3>
+    <h1 class="hero-title">Denim Studio</h1>
+  </div>
+</section>
+
+<div class="cards-container">
+    <div class="card blue">
+      <div class="product">
+        <span class="number">01</span>
+        <span class="sneakers">SHORT</span>
+        <span class="price">$39.9</span>
+        <img src="images/Denim-Blue.png">
+      </div>
+      <div class="title">
+        <h2>Denim Blue</h2>
+      </div>
+    </div>
+    <div class="card pink">
+      <div class="product">
+        <span class="number">02</span>
+        <span class="sneakers">SHORT</span>
+        <span class="price">$39.9</span>
+        <img src="images/Denim-Pink.png">
+      </div>
+      <div class="title">
+        <h2>Denim Pink</h2>
+      </div>
+    </div>
+    <div class="card purple">
+      <div class="product">
+        <span class="number">03</span>
+        <span class="sneakers">SHORT</span>
+        <span class="price">$39.9</span>
+        <img src="images/Denim-Purple.png">
+      </div>
+      <div class="title">
+        <h2>Denim Purple</h2>
+      </div>
+    </div>
+    <div class="card red">
+      <div class="product">
+        <span class="number">04</span>
+        <span class="sneakers">SHORT</span>
+        <span class="price">$39.9</span>
+        <img src="images/Denim-Red.png">
+      </div>
+      <div class="title">
+        <h2>Denim Red</h2>
+      </div>
+    </div>
+    <div class="card gray">
+      <div class="product">
+        <span class="number">05</span>
+        <span class="sneakers">SHORT</span>
+        <span class="price">$39.9</span>
+        <img src="images/Denim-Gray.png">
+      </div>
+      <div class="title">
+        <h2>Denim Gray</h2>
+      </div>
+    </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.2/vanilla-tilt.min.js"></script>
+<script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", function() {
+        VanillaTilt.init(document.querySelectorAll(".card"), {
+            max: 25,
+            speed: 5000,
+            glare: true,
+            "max-glare": 0.5,
+        });
+    });
+</script>
 </body>
 </html>
